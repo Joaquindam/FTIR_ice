@@ -70,31 +70,31 @@ All plots and results will be generated automatically inside the configured fold
 
 ## Example Configuration
 
-CONFIG = {
-    "IR_PATH": r"C:\\Users\\Usuario\\Documents\\CAB\\20251023_CO_irr_TPD\\20251023_CO_irr_TPD_IR",
-    "SAVE_FIGURE": True,
-    "OUTPUT_FILE": "infrared_overlay.png",
-    "INTEGRATE_BANDS": True,
-    "INTEGRATION_RANGE": (2155, 2130),
-    "SHOW_INTEGRATION_PLOT": False,
-    "SAVE_INTEGRATION_PLOTS": True,
-    "INTEGRATION_PLOTS_DIR": "results/integrations/",
-}
+    CONFIG = {
+        "IR_PATH": r"C:\\Users\\Usuario\\Documents\\CAB\\20251023_CO_irr_TPD\\20251023_CO_irr_TPD_IR",
+        "SAVE_FIGURE": True,
+        "OUTPUT_FILE": "infrared_overlay.png",
+        "INTEGRATE_BANDS": True,
+        "INTEGRATION_RANGE": (2155, 2130),
+        "SHOW_INTEGRATION_PLOT": False,
+        "SAVE_INTEGRATION_PLOTS": True,
+        "INTEGRATION_PLOTS_DIR": "results/integrations/",
+    }
 
 ---
 
 ## Example output
 
-Integrating spectral feature between 2155 and 2130 cm⁻¹
-  • 20251023_145309_ventana_co_dep_10min_irr_15min: area = 0.00235, N = 4.92e14 molec cm⁻² (0.49 ML)
-Saved integration plot: results/integrations/20251023_145309_integration.png
+    Integrating spectral feature between 2155 and 2130 cm⁻¹
+        • 20251023_145309_ventana_co_dep_10min_irr_15min: area = 0.00235, N = 4.92e14 molec cm⁻² (0.49 ML)
+    Saved integration plot: results/integrations/20251023_145309_integration.png
 
 ---
 
 ## Author
 
-Joaquín Delgado Amar
-Centro de Astrobiología (CAB), CSIC-INTA, Spain
+    Joaquín Delgado Amar
+    Centro de Astrobiología (CAB), CSIC-INTA, Spain
 
 ---
 
