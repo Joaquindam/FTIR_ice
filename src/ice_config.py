@@ -44,7 +44,7 @@ PLOT_SETTINGS = {
 CONVERSION_SETTINGS = {
     "CONVERT_TO_COLUMN_DENSITY": True,   # If True, convert integrated area to N (cm^-2)
     "CONVERT_TO_MONOLAYERS": True,       # If True, also express result in ML
-    "BAND_STRENGTH": 1.1e-17,            # Example: SO2 stretching band (cm molecule^-1)
+    "BAND_STRENGTH": 1.1e-17,            # CO stretch band at 2139 cm⁻¹
     "MONOLAYER_EQUIVALENCE": 1e15,       # molecules cm^-2 per monolayer
     "SAVE_INTEGRATION_PLOTS": True,  # Save each integration figure instead of showing
     "INTEGRATION_PLOTS_DIR": "results/integrations/",  # Folder for saving plots

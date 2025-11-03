@@ -67,7 +67,7 @@ def main(cfg: dict):
     # --- Determine whether path is a file or directory ---
     if os.path.isfile(path):
         spectra_files = [path]
-        print(f"📄 Single file detected: {os.path.basename(path)}")
+        print(f"Single file detected: {os.path.basename(path)}")
 
     elif os.path.isdir(path):
         # Accept common IR file extensions
@@ -78,7 +78,7 @@ def main(cfg: dict):
         ]
         print(f"Directory detected: found {len(spectra_files)} spectra in {path}")
     else:
-        raise FileNotFoundError(f"❌ Invalid path: {path}")
+        raise FileNotFoundError(f"Invalid path: {path}")
 
     if not spectra_files:
         print("Error: No valid IR files found in the specified path.")
@@ -126,10 +126,22 @@ def main(cfg: dict):
                     save_path=cfg.get("INTEGRATION_PLOTS_DIR", "results/integrations/"),
                     filename=os.path.basename(fpath).replace(".dpt", "_integration.png")
                 )
-                print(f"  • {os.path.basename(fpath)}: area = {area:.6f}")
+
+                # === Conversion to physical quantities ===
+                if conv.get("CONVERT_TO_COLUMN_DENSITY", False):
+                    N = area_to_column_density(
+                        area,
+                        conv["BAND_STRENGTH"],
+                        in_monolayers=conv.get("CONVERT_TO_MONOLAYERS", False)
+                    )
+                    unit = "ML" if conv.get("CONVERT_TO_MONOLAYERS", False) else "molec cm⁻²"
+                    print(f"  • {os.path.basename(fpath)}: area = {area:.6f}, N = {N:.3f} {unit}")
+                else:
+                    print(f"  • {os.path.basename(fpath)}: area = {area:.6f}")
 
             except Exception as e:
-                print(f" Error integrating {fpath}: {e}")
+                print(f"Error integrating {fpath}: {e}")
+
 
 # ===============================================================
 #  EXECUTION ENTRY POINT
