@@ -56,9 +56,9 @@ and to convert them into physical quantities such as column densities or monolay
 
 Edit the configuration block at the top of main.py to define:
 
-    • The path to a single FTIR file or a folder containing multiple spectra
-    • Whether to show or save the plots
-    • The integration range and conversion options
+- The path to a single FTIR file or a folder containing multiple spectra
+- Whether to show or save the plots
+- The integration range and conversion options
 
 Then run:
 
