@@ -20,16 +20,16 @@ and to convert them into physical quantities such as column densities or monolay
 
 ## Project Structure
 
-ftir_ice/
-├── main.py # Main entry point
-├── src/
-│ ├── ice_io.py # Read FTIR data files
-│ ├── ice_plots.py # Plotting utilities
-│ ├── ice_integrate.py # Band integration + visualization
-│ └── ice_config.py # Global configuration (limits, colors, bands…)
-├── results/ # (Optional) Output folder for plots
-├── requirements.txt
-└── README.md
+    ftir_ice/
+    ├── main.py # Main entry point
+    ├── src/
+    │ ├── ice_io.py # Read FTIR data files
+    │ ├── ice_plots.py # Plotting utilities
+    │ ├── ice_integrate.py # Band integration + visualization
+    │ └── ice_config.py # Global configuration (limits, colors, bands…)
+    ├── results/ # (Optional) Output folder for plots
+    ├── requirements.txt
+    └── README.md
 
 ---
 
