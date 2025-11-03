@@ -1,14 +1,13 @@
 """
 main.py
 --------------------------------------------------------------------
-Astro Ice Analysis — Infrared Spectral Visualization Tool
+FTIR_ice — Infrared Spectral Visualization Tool
 
 This script visualizes one or multiple infrared (FTIR) spectra from
 astrochemical ice experiments. If the input path corresponds to a
 single file, only that spectrum is plotted. If the path corresponds
 to a directory, all spectra inside are plotted together for comparison.
 
-Developed for the Astrophysical & Planetary Ices Laboratory
 --------------------------------------------------------------------
 Author: Joaquín Delgado Amar
 Affiliation: [Centro de Astrobiología (CAB), CSIC-INTA, Spain]
@@ -135,7 +134,7 @@ def main(cfg: dict):
                         in_monolayers=conv.get("CONVERT_TO_MONOLAYERS", False)
                     )
                     unit = "ML" if conv.get("CONVERT_TO_MONOLAYERS", False) else "molec cm⁻²"
-                    print(f"  • {os.path.basename(fpath)}: area = {area:.6f}, N = {N:.3f} {unit}")
+                    print(f"\n • {os.path.basename(fpath)}: area = {area:.6f}, N = {N:.3f} {unit}")
                 else:
                     print(f"  • {os.path.basename(fpath)}: area = {area:.6f}")
 
