@@ -29,8 +29,7 @@ from src.ice_config import CONVERSION_SETTINGS as conv
 
 CONFIG = {
     # === Input path (file OR directory) ===
-    # Provide either a file (e.g. "...\\spectrum.dpt")
-    # or a folder (e.g. "...\\IR_data\\")
+    # Provide either a file or a folder containing multiple spectra files.
     "IR_PATH": r"C:\Users\Usuario\Documents\CAB\20251023_CO_irr_TPD/20251023_CO_irr_TPD_IR",
 
     # === Output options ===
