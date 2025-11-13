@@ -1,0 +1,5 @@
+Sample	Integrated_Area	Monolayers
+20251023_131750_ventana_co_dep_10min_2cm-1_scan128.0	4.716908e-01	98.754900
+20251023_140249_ventana_co_dep_10min_irr_5min_2cm-1_scan128.0	4.673925e-01	97.854992
+20251023_142413_ventana_co_dep_10min_irr_10min_2cm-1_scan128.0	4.598502e-01	96.275909
+20251023_145309_ventana_co_dep_10min_irr_15min_2cm-1_scan128.0	4.604995e-01	96.411846

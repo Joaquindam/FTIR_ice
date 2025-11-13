@@ -113,6 +113,7 @@ def main(cfg: dict):
         x1, x2 = cfg["INTEGRATION_RANGE"]
         print(f"\n Integrating spectral feature between {x1} and {x2} cm⁻¹")
 
+        results_table = []
         for fpath in spectra_files:
             try:
                 x, y = read_ir(fpath)
@@ -139,6 +140,35 @@ def main(cfg: dict):
 
             except Exception as e:
                 print(f"Error integrating {fpath}: {e}")
+
+            sample_name = os.path.splitext(os.path.basename(fpath))[0]
+
+            if conv.get("CONVERT_TO_COLUMN_DENSITY", False):
+                results_table.append((sample_name, area, N))
+            else:
+                results_table.append((sample_name, area, None))
+
+        if results_table:
+            out_path = os.path.join("results", "ftir_integration_results.txt")
+            os.makedirs(os.path.dirname(out_path), exist_ok=True)
+
+        with open(out_path, "w", encoding="utf-8") as f:
+            if conv.get("CONVERT_TO_MONOLAYERS", False):
+                f.write("Sample\tIntegrated_Area\tMonolayers\n")
+            elif conv.get("CONVERT_TO_COLUMN_DENSITY", False):
+                f.write("Sample\tIntegrated_Area\tColumn_Density(cm^-2)\n")
+            else:
+                f.write("Sample\tIntegrated_Area\n")
+
+            for entry in results_table:
+                name, area, N = entry
+                if N is not None:
+                    f.write(f"{name}\t{area:.6e}\t{N:.6f}\n")
+                else:
+                    f.write(f"{name}\t{area:.6e}\n")
+                
+            print(f"\nResults saved to: {out_path}")
+
 
 
 # ===============================================================
