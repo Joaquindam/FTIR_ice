@@ -54,17 +54,22 @@ and to convert them into physical quantities such as column densities or monolay
 
 ## Usage
 
-Edit the configuration block at the top of main.py to define:
+Edit the configuration block at the top of **`main.py`** to define:
 
-- The path to a single FTIR file or a folder containing multiple spectra
-- Whether to show or save the plots
-- The integration range and conversion options
+- The path to a single FTIR spectrum file or to a folder containing multiple spectra.
+- Whether to **display** the plots interactively or **save** them to disk.
+- The **integration range** for the absorption band of interest.
+- Whether to **convert** the integrated area to column density or monolayers.
+
+Then, adjust **`src/ice_config.py`** to specify:
+
+- Plot axis limits and reference (vertical) lines.
+- Band strength values (`A`, in cm·molecule⁻¹) for the molecular species.
+- Conversion factors to monolayers, if applicable.
 
 Then run:
 
     python main.py
-
-All plots and results will be generated automatically inside the configured folders.
 
 ---
 

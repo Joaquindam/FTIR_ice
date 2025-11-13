@@ -31,7 +31,7 @@ PLOT_SETTINGS = {
 
     # === Vertical reference lines ===
     # Wavenumbers (cm^-1) where vertical dashed lines should be drawn
-    "REFERENCE_LINES": [21],  # SO₂, SO₃, etc.
+    "REFERENCE_LINES": [2138],  # SO₂, SO₃, etc.
     "REFERENCE_COLOR": "gray",
     "REFERENCE_STYLE": "--",
     "REFERENCE_ALPHA": 0.6,
